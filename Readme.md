@@ -38,8 +38,14 @@ Digit:
     0|1|...|9
 ```
 
+In order to use the interpreter, you must first compile and create an executable:
+
 ```
 mkdir out
 javac -d out/ src/com/sajjadbashar/*
 jar cvfm Compiler.jar Manifest.txt -C out/ .
 ```
+
+The generated artifact, namely the "Compiler.jar" file accepts one argument, which is a path to text file.
+To run the program, do the the following:
+``` java -jar Compiler.jar path/to/text/file ```
